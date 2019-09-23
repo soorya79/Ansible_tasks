@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Copy file with owner and permissions
+      copy:
+        src: C:/Users/u89949/Desktop/FinalScript
+        dest: C:/Users/u89949/Downloads
+        owner: foo
+        group: foo
+        mode: '0644'
