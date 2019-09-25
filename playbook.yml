@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Get path for home user
+        shell: echo $HOME
+        register : home_path
+    - name: Create a folder 
+      file:
+        path: "{{ home_path.stdout }}/Soorya"
+        state: directory
