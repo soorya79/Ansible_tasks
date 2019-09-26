@@ -4,7 +4,7 @@
   
     - name: Get path for home user
       shell: echo $HOME
-        register : home_path
+      register : home_path
     - name: Print
       debug:
         msg: "{{ home_path.stdout }}"
